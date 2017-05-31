@@ -109,9 +109,9 @@ func Search(query, country, media string) ([]SearchResult, error) {
 func Lookup(search_term string, search_term_value string, entity string, limit int, sort string) ([]LookupResult, error) {
 	u := url.Values{}
 	u[search_term] = []string{search_term_value}
-	u["entity"] = entity
-	u["limit"] = limit
-	u["sort"] = sort
+	u["entity"] = []string{entity}
+	u["limit"] = []string{limit}
+	u["sort"] = []string{sort}
 	log.Println("URL: ", u.Encode())
 	res, err := http.Get("https://itunes.apple.com/lookup?" + u.Encode())
 	if err != nil {
