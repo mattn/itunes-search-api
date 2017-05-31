@@ -9,6 +9,6 @@ go get github.com/Fyb3roptik/itunes-search-api
 # Examples
 ```golang
 import(
-  "github.com/Fyb3roptik/hubspot"
+  "github.com/Fyb3roptik/itunes-search-api"
 )
 ```
