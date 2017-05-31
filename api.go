@@ -118,10 +118,10 @@ func Lookup(search_term string, search_term_value string, entity string, limit i
 	var ret struct {
 		LookupResult []LookupResult
 	}
-	log.Println("BODY: ", res.Body)
 	err = json.NewDecoder(res.Body).Decode(&ret)
 	if err != nil {
 		return nil, err
 	}
+	log.Println("BODY: ", ret)
 	return ret.LookupResult, nil
 }
