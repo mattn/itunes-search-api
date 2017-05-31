@@ -106,11 +106,11 @@ func Search(query, country, media string) ([]SearchResult, error) {
 
 // New Lookup API
 // search_term will be id, amgArtistId, upc, isbn
-func Lookup(search_term string, search_term_value string, entity string, limit int, sort string) ([]LookupResult, error) {
+func Lookup(search_term string, search_term_value string, entity string, limit string, sort string) ([]LookupResult, error) {
 	u := url.Values{}
 	u[search_term] = []string{search_term_value}
 	u["entity"] = []string{entity}
-	u["limit"] = []int{limit}
+	u["limit"] = []string{limit}
 	u["sort"] = []string{sort}
 	log.Println("URL: ", u.Encode())
 	res, err := http.Get("https://itunes.apple.com/lookup?" + u.Encode())
