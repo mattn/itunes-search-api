@@ -64,12 +64,12 @@ type LookupResult struct {
 	Currency														string		`json:"currency"`
 	WrapperType													string		`json:"wrapperType"`
 	Version															string		`json:"version"`
-	ArtistId														int				`json:"artistId"`
+	ArtistId														float64		`json:"artistId"`
 	ArtistName													string		`json:"artistName"`
 	Genres															[]string	`json:"genres"`
 	Price																float64		`json:"price"`
 	Description													string		`json:"description"`
-	TrackId															int				`json:"trackId"`
+	TrackId															float64		`json:"trackId"`
 	TrackName														string		`json:"trackName"`
 	BundleId														string		`json:"bundleId"`
 	ReleaseNotes												string		`json:"releaseNotes"`
@@ -78,7 +78,7 @@ type LookupResult struct {
 	ReleaseDate													string		`json:"releaseDate"`
 	FormattedPrice											string		`json:"formattedPrice"`
 	MinimumOsVersion										string		`json:"minimumOsVersion"`
-	PrimaryGenreId											int				`json:"primaryGenreId"`
+	PrimaryGenreId											float64		`json:"primaryGenreId"`
 	SellerName													string		`json:"sellerName"`
 	GenreIds														[]string	`json:"genreIds"`
 	CurrentVersionReleaseDate						string		`json:"currentVersionReleaseDate"`
