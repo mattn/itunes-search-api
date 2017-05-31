@@ -42,46 +42,46 @@ type SearchResult struct {
 }
 
 type LookupResult struct {
+	//Advisories													[]string	`json:"advisories"`
+	//AppletvScreenshotUrls								[]string	`json:"appletvScreenshotUrls"`
+	ArtistId														float64		`json:"artistId"`
+	ArtistName													string		`json:"artistName"`
 	ArtistViewUrl												string		`json:"artistViewUrl"`
 	ArtworkUrl60												string		`json:"artworkUrl60"`
 	ArtworkUrl100												string		`json:"artworkUrl100"`
-	IpadScreenshotUrls									[]string	`json:"ipadScreenshotUrls"`
-	AppletvScreenshotUrls								[]string	`json:"appletvScreenshotUrls"`
-	ArtworkUrl512												[]string	`json:"artworkUrl512"`
-	IsGameCenterEnabled									bool			`json:"isGameCenterEnabled"`
-	Features														[]string	`json:"features"`
-	Kind																string		`json:"kind"`
-	SupportedDevices										[]string	`json:"supportedDevices"`
-	ScreenshotUrls											[]string	`json:"screenshotUrls"`
-	Advisories													[]string	`json:"advisories"`
-	TrackCensoredName										string		`json:"trackCensoredName"`
-	TrackViewUrl												string		`json:"trackViewUrl"`
+	//ArtworkUrl512												[]string	`json:"artworkUrl512"`
+	BundleId														string		`json:"bundleId"`
 	ContentAdvisoryRating								string		`json:"contentAdvisoryRating"`
-	LanguageCodesISO2A									[]string	`json:"languageCodesISO2A"`
-	FileSizeBytes												string		`json:"fileSizeBytes"`
-	SellerUrl														string		`json:"sellerUrl"`
-	TrackContentRating									string		`json:"trackContentRating"`
 	Currency														string		`json:"currency"`
-	WrapperType													string		`json:"wrapperType"`
-	Version															string		`json:"version"`
-	ArtistId														float64		`json:"artistId"`
-	ArtistName													string		`json:"artistName"`
-	Genres															[]string	`json:"genres"`
-	Price																float64		`json:"price"`
+	CurrentVersionReleaseDate						string		`json:"currentVersionReleaseDate"`
 	Description													string		`json:"description"`
+	//Features														[]string	`json:"features"`
+	FileSizeBytes												string		`json:"fileSizeBytes"`
+	FormattedPrice											string		`json:"formattedPrice"`
+	//Genres															[]string	`json:"genres"`
+	//GenreIds														[]string	`json:"genreIds"`
+	//IpadScreenshotUrls									[]string	`json:"ipadScreenshotUrls"`
+	IsGameCenterEnabled									bool			`json:"isGameCenterEnabled"`
+	IsVppDeviceBasedLicensingEnabled		bool			`json:"isVppDeviceBasedLicensingEnabled"`
+	Kind																string		`json:"kind"`
+	//LanguageCodesISO2A									[]string	`json:"languageCodesISO2A"`
+	MinimumOsVersion										string		`json:"minimumOsVersion"`
+	Price																float64		`json:"price"`
+	PrimaryGenreId											float64		`json:"primaryGenreId"`
+	PrimaryGenreName										string		`json:"primaryGenreName"`
+	ReleaseDate													string		`json:"releaseDate"`
+	ReleaseNotes												string		`json:"releaseNotes"`
+	//ScreenshotUrls											[]string	`json:"screenshotUrls"`
+	SellerName													string		`json:"sellerName"`
+	SellerUrl														string		`json:"sellerUrl"`
+	//SupportedDevices										[]string	`json:"supportedDevices"`
+	TrackCensoredName										string		`json:"trackCensoredName"`
+	TrackContentRating									string		`json:"trackContentRating"`
 	TrackId															float64		`json:"trackId"`
 	TrackName														string		`json:"trackName"`
-	BundleId														string		`json:"bundleId"`
-	ReleaseNotes												string		`json:"releaseNotes"`
-	PrimaryGenreName										string		`json:"primaryGenreName"`
-	IsVppDeviceBasedLicensingEnabled		bool			`json:"isVppDeviceBasedLicensingEnabled"`
-	ReleaseDate													string		`json:"releaseDate"`
-	FormattedPrice											string		`json:"formattedPrice"`
-	MinimumOsVersion										string		`json:"minimumOsVersion"`
-	PrimaryGenreId											float64		`json:"primaryGenreId"`
-	SellerName													string		`json:"sellerName"`
-	GenreIds														[]string	`json:"genreIds"`
-	CurrentVersionReleaseDate						string		`json:"currentVersionReleaseDate"`
+	TrackViewUrl												string		`json:"trackViewUrl"`
+	Version															string		`json:"version"`
+	WrapperType													string		`json:"wrapperType"`
 }
 
 func Search(query, country, media string) ([]SearchResult, error) {
