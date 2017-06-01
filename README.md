@@ -3,13 +3,13 @@ iTunes Search API for Go.
 
 # Installation
 ```golang
-go get github.com/Fyb3roptik/itunes-search-api
+go get github.com/mattn/itunes-search-api
 ```
 
 # Examples
 ```golang
 import(
-  "github.com/Fyb3roptik/itunes-search-api"
+  "github.com/mattn/itunes-search-api"
 )
 ```
 # Search Example
