@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/mattn/itunes-search-api"
 	"log"
+
+	"github.com/mattn/itunes-search-api"
 )
 
 func main() {
@@ -11,7 +12,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	for _, result := range results {
+	for _, result := range results.Results {
 		fmt.Println(result.ArtistName, result.TrackName, result.CollectionViewUrl)
 		playURL(result.PreviewUrl)
 	}
