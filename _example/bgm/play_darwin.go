@@ -1,4 +1,5 @@
 package main
+
 /*
 #cgo CFLAGS: -x objective-c
 #cgo LDFLAGS: -framework Foundation -framework AVFoundation -framework CoreMedia
@@ -46,4 +47,3 @@ func playURL(url string) error {
 	}
 	return nil
 }
-
